@@ -17,7 +17,7 @@
  }
 
  .logo-bool img {
-    width: 400px;
+    width: 300px;
     margin-bottom: 10px;
  }
 
@@ -26,8 +26,9 @@
  }
 
  .container-todos {
-    padding: 10px;
-    background-color: lightgray;
+    padding: 20px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
  }
 
  .todos-list {
@@ -35,12 +36,21 @@
  }
 
  .todos-list li {
-    border-bottom: 1px solid grey;
-    padding: 5px;
+    border-bottom: 1px solid rgb(179, 179, 179);
+    padding: 10px;
     display: flex;
     justify-content: space-between;
 }
 
 .todos-list li  i{
 cursor: pointer;
+}
+
+.btn-aggiungi, input{
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.todos-list li:hover {
+    background-color: #fff;
 }
