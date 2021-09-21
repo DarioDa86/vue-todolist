@@ -10,10 +10,31 @@
          
         <title>Vue To Do List</title>
         <link rel="stylesheet" href="style.css">
+
     </head>
     <body>
-        
-        
+
+        <div id="root" class="big-container">
+
+            <header>
+                <div class="logo-bool">
+                    <img src="logo.png" alt="">
+                </div>
+                <div class="search">
+                    <input v-model="newTodo" type="text" placeholder="Nuovo Todo">
+                    <button @click="addTodo()">Aggiungi</button>
+                </div>
+            </header>
+            <main>
+                <div class="container-todos">
+                    <ul v-if="todos.length" class="todos-list">
+                        <li v-for="(todo, index) in todos" :key="index">{{todo}} <i class="fas fa-times" @click="removeTodo(index)"></i></li>
+                    </ul>
+                    <h3 v-else> Non ci sono todo</h3>
+                </div>
+            </main>
+        </div>
+
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
         <script src="main.js"></script>
     </body>
